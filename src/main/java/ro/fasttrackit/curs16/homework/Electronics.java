@@ -1,6 +1,6 @@
 package ro.fasttrackit.curs16.homework;
 
-public class Electronics implements ShopItem{
+public class Electronics implements ShopItem {
     @Override
     public String name() {
         return "TV";
@@ -14,5 +14,10 @@ public class Electronics implements ShopItem{
     @Override
     public Category category() {
         return Category.REFURBISHED;
+    }
+
+    @Override
+    public String toString() {
+        return "Electronics:" + name() + ", " + price() + ", "  + category();
     }
 }

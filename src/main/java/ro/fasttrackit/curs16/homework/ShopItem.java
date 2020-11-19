@@ -1,9 +1,9 @@
 package ro.fasttrackit.curs16.homework;
 
 interface ShopItem {
-    public String name();
+    String name();
 
-    public int price();
+    int price();
 
-    public Category category();
+    Category category();
 }

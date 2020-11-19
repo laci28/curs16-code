@@ -15,4 +15,9 @@ public class Fruits implements ShopItem {
     public Category category() {
         return Category.ON_SALE;
     }
+
+    @Override
+    public String toString() {
+        return "Fruits: " + name() + ", " + price() + ", "  + category();
+    }
 }

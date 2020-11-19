@@ -1,8 +1,11 @@
 package ro.fasttrackit.curs16.homework;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Shop<T> implements ShopItem {
+    List<T> list = new ArrayList<T>();
     private Clothes clothes;
     private Electronics electronics;
     private Fruits fruits;
@@ -35,6 +38,11 @@ public class Shop<T> implements ShopItem {
                 '}';
     }
 
+    public void addItem(T item) {
+        //List<T> list = new ArrayList<T>();
+        list.add(item);
+    }
+
     @Override
     public String name() {
         return null;
@@ -49,4 +57,22 @@ public class Shop<T> implements ShopItem {
     public Category category() {
         return null;
     }
+/*
+    public List<T> findByCategory(Category cat) {
+
+        return null;
+    }
+
+    public List<T> findWithLowerPrice(int maxPrice) {
+        return null;
+    }
+
+    public Optional<T> findByName(String name) {
+        return null;
+    }
+
+    public Optional<T> removeItem(String name) {
+        return null;
+    }
+*/
 }
