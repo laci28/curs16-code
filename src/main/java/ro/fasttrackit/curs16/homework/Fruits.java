@@ -1,23 +1,13 @@
 package ro.fasttrackit.curs16.homework;
 
-public class Fruits implements ShopItem {
-    @Override
-    public String name() {
-        return "Orange";
-    }
+public class Fruits extends ShopItem {
 
-    @Override
-    public int price() {
-        return 2;
-    }
-
-    @Override
-    public Category category() {
-        return Category.ON_SALE;
+    public Fruits(String name, int price, Category category) {
+        super(name, price, category);
     }
 
     @Override
     public String toString() {
-        return "Fruits: " + name() + ", " + price() + ", "  + category();
+        return "Fruits{}";
     }
 }

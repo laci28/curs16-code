@@ -1,23 +1,12 @@
 package ro.fasttrackit.curs16.homework;
 
-public class Electronics implements ShopItem {
-    @Override
-    public String name() {
-        return "TV";
-    }
-
-    @Override
-    public int price() {
-        return 100;
-    }
-
-    @Override
-    public Category category() {
-        return Category.REFURBISHED;
+public class Electronics extends ShopItem {
+    public Electronics(String name, int price, Category category) {
+        super(name, price, category);
     }
 
     @Override
     public String toString() {
-        return "Electronics:" + name() + ", " + price() + ", "  + category();
+        return "Electronics{}";
     }
 }
