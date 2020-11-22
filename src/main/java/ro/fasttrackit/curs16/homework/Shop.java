@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class Shop<T extends ShopItem> {
-    private final List<T> list = new ArrayList<T>();
+    private List<T> list = new ArrayList<T>();
     private final T item;
 
     public Shop(T item) {
@@ -13,7 +13,7 @@ public class Shop<T extends ShopItem> {
     }
 
     public List<T> getList() {
-        return list;
+        return new ArrayList<T>(list);
     }
 
     public T getItem() {
