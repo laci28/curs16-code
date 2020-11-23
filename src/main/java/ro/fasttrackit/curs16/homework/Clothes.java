@@ -1,13 +1,26 @@
 package ro.fasttrackit.curs16.homework;
 
-public class Clothes extends ShopItem {
+public class Clothes implements ShopItem {
+    public Clothes() {
+    }
 
-    public Clothes(String name, int price, Category category) {
-        super(name, price, category);
+    @Override
+    public String name() {
+        return "T-shirt";
+    }
+
+    @Override
+    public int price() {
+        return 10;
+    }
+
+    @Override
+    public Category category() {
+        return Category.NEW;
     }
 
     @Override
     public String toString() {
-        return "Clothes{}";
+        return "Clothes: " + name() + ", " + price() + ", "  + category();
     }
 }
