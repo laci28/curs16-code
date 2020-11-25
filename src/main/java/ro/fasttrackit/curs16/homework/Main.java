@@ -1,20 +1,26 @@
 package ro.fasttrackit.curs16.homework;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args){
-        Clothes clothes = new Clothes("T-shirt", 7, Category.NEW);
-        Fruits fruits = new Fruits("Orange", 2, Category.ON_SALE);
-        Electronics electronics = new Electronics("TV", 120, Category.REFURBISHED);
-        Shop<Clothes> clothesShop = new Shop<Clothes>(clothes);
-        Shop<Fruits> fruitsShop = new Shop<Fruits>(fruits);
-        Shop<Electronics> electronicsShop = new Shop<Electronics>(electronics);
-        Clothes clothes1 = clothesShop.getItem();
+        Shop<Electronic> electronicShop = new Shop<>(List.of());
+        electronicShop.addItem(new Electronic("tv", 1500, Category.ON_SALE));
+        electronicShop.addItem(new Electronic("laptop", 2100, Category.REFURBISHED));
+        electronicShop.addItem(new Electronic("monitor", 800, Category.ON_SALE));
+        electronicShop.addItem(new Electronic("lampa", 50, Category.NEW));
+        electronicShop.addItem(new Electronic("telefon", 1100, Category.REFURBISHED));
+        electronicShop.addItem(new Electronic("imprimanta", 200, Category.ON_SALE));
+        electronicShop.addItem(new Electronic("ceas", 300, Category.NEW));
+        electronicShop.addItem(null);
 
-        electronicsShop.addItem(electronicsShop.getItem());
-        System.out.println(clothesShop);
-        System.out.println(fruitsShop);
-        System.out.println(electronicsShop);
-        System.out.println(clothes1);
-        System.out.println(electronicsShop.findByCategory(Category.NEW));
+        System.out.println(electronicShop.findByCategory(Category.ON_SALE));
+        System.out.println(electronicShop.findWithLowerPrice(1200));
+        System.out.println(electronicShop.findByName("ceas"));
+        System.out.println();
+        //System.out.println(electronicShop.getAllItems());
+        electronicShop.removeItem("imprimanta");
+        System.out.println();
+        //System.out.println(electronicShop.getAllItems());
     }
 }

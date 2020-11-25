@@ -1,13 +1,14 @@
 package ro.fasttrackit.curs16.homework;
+
 import java.util.Objects;
 
-public class Clothes implements ShopItem {
+public class Fruit implements ShopItem {
     private final String name;
     private final int price;
     private final Category category;
 
 
-    public Clothes(String name, int price, Category category) {
+    public Fruit(String name, int price, Category category) {
         this.name = name;
         this.price = price;
         this.category = category;
@@ -33,10 +34,10 @@ public class Clothes implements ShopItem {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Clothes clothes = (Clothes) o;
-        return price == clothes.price &&
-                Objects.equals(name, clothes.name) &&
-                category == clothes.category;
+        Fruit fruits = (Fruit) o;
+        return price == fruits.price &&
+                Objects.equals(name, fruits.name) &&
+                category == fruits.category;
     }
 
     @Override
@@ -46,7 +47,7 @@ public class Clothes implements ShopItem {
 
     @Override
     public String toString() {
-        return "Clothes{" +
+        return "Fruit{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
                 ", category=" + category +
